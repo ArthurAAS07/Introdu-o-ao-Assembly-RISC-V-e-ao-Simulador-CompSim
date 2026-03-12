@@ -1,0 +1,15 @@
+lw x10, a
+lw x11, b
+lw x12, m
+
+add x12, x10, x0
+bge x11, x12, jump
+add x12, x10, x11
+
+jump:
+sw x12, m
+halt
+
+a: .word 25
+b: .word 12
+m: .word 0
