@@ -1,0 +1,23 @@
+lw x19, f
+lw x20, g
+lw x21, h
+lw x22, i
+lw x23, j
+
+beq x22, x23, soma
+
+sub x19, x20, x21
+jal x0, jump
+
+soma:
+add x19, x20, x21
+
+jump:
+sw x19, f
+halt
+
+f: .word 1
+g: .word 2
+h: .word 3
+i: .word 4
+j: .word 5
